@@ -1,3 +1,5 @@
+@use 'hero';
+
 * {
     margin: 0;
     padding: 0;
@@ -47,4 +49,11 @@ body {
 
 .title--big {
     @include title(44px);
+}
+
+
+.link--text {
+    @include text(18px);
+    color: $corTextoSecundario;
+    text-decoration: underline;
 }
