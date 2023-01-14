@@ -1,3 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundario: #f9f9f9;
+
+
 body {
-    background-color: rgb(49, 17, 75);
+    background-color: $corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: $corTextoSecundario;
+}
+
+.text {
+    @include text;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text--small {
+    @include text(12px);
+}
+
+
+.title{
+    @include title(28px);
+}
+
+.title--small {
+    @include title(40px);
+}
+
+.title--big {
+    @include title(44px);
 }
